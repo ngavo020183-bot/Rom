@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kho ROM Của Tôi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div id="game"></div>
+
+    <script>
+        // Cấu hình EmulatorJS
+        EJS_player = '#game';
+        EJS_core = 'gba'; // Đổi thành 'snes' nếu chơi game SNES
+        EJS_gameUrl = 'LINK_RAW_GITHUB_CUA_BAN'; // Dán link từ GitHub vào đây
+        
+        // Đoạn code tối ưu của bạn
+        EJS_buttonsTransparency = 0.5; 
+        EJS_startOnLoaded = true;
+        
+        // Hiện nút Thoát và các tính năng bổ sung
+        EJS_Buttons = {
+            exit: true,
+            saveState: true,
+            loadState: true,
+            fullscreen: true
+        };
+    </script>
+    <script src="https://www.emulatorjs.org/loader.js"></script>
+</body>
+</html>
