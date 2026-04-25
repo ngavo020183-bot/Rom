@@ -12,6 +12,25 @@
         EJS_player = '#game';
         EJS_core = 'gba'; // Đổi thành 'snes' nếu chơi game SNES
         EJS_gameUrl = 'https://github.com/ngavo020183-bot/Rom.git'; // Dán link từ GitHub vào đây
+
+        // 1. Dán link .gba bạn vừa copy vào đây
+        EJS_gameUrl = 'https://raw.githubusercontent.com/ngavo020183-bot/Rom/main/1212%20-%20Super%20Mario%20Advance%204%20-%20Super%20Mario%20Bros%203%20(U)(Independent).gba'; 
+
+        // 2. Hiện nút Thoát và các tính năng
+        EJS_Buttons = {
+            exit: true,      
+            saveState: true, 
+            loadState: true, 
+            fullscreen: true 
+        };
+
+        // 3. Chế độ Tap (Cảm ứng)
+        EJS_buttonsTransparency = 0.5;
+        EJS_startOnLoaded = true;
+        
+        // 4. Lệnh Thoát quay về trang chủ
+        EJS_onExit = () => { window.location.href = '/'; };
+        
         
         // Đoạn code tối ưu của bạn
         EJS_buttonsTransparency = 0.5; 
