@@ -1,45 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi">
 <head>
-    <title>Kho ROM Của Tôi</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kho Game Của Tôi</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <style>
+        body, html { margin: 0; padding: 0; width: 100%; height: 100%; background: #000; overflow: hidden; }
+        #game { width: 100vw; height: 100vh; }
+    </style>
 </head>
 <body>
     <div id="game"></div>
 
     <script>
-        // Cấu hình EmulatorJS
         EJS_player = '#game';
-        EJS_core = 'gba'; // Đổi thành 'snes' nếu chơi game SNES
-         // 1. Dán link .gba bạn vừa copy vào đây
-         EJS_gameUrl = 'https://raw.githubusercontent.com/ngavo020183-bot/Rom/main/1212%20-%20Super%20Mario%20Advance%204%20-%20Super%20Mario%20Bros%203%20(U)(Independent).gba'; 
+        EJS_core = 'gba'; 
+        
+        // Link "Hàng" chuẩn đuôi .gba từ GitHub của bạn
+        EJS_gameUrl = 'https://raw.githubusercontent.com/ngavo020183-bot/Rom/main/1212%20-%20Super%20Mario%20Advance%204%20-%20Super%20Mario%20Bros%203%20(U)(Independent).gba';
 
-        // 2. Hiện nút Thoát và các tính năng
-        EJS_Buttons = {
-            exit: true,      
-            saveState: true, 
-            loadState: true, 
-            fullscreen: true 
-        };
-
-        // 3. Chế độ Tap (Cảm ứng)
-        EJS_buttonsTransparency = 0.5;
-        EJS_startOnLoaded = true;
-        
-        // 4. Lệnh Thoát quay về trang chủ
-        EJS_onExit = () => { window.location.href = '/'; };
-        
-        
-        // Đoạn code tối ưu của bạn
-        EJS_buttonsTransparency = 0.5; 
-        EJS_startOnLoaded = true;
-        
-        // Hiện nút Thoát và các tính năng bổ sung
+        // Cấu hình nút bấm (Thoát, Save, Load)
         EJS_Buttons = {
             exit: true,
             saveState: true,
             loadState: true,
             fullscreen: true
+        };
+
+        // Cấu hình Tap/Cảm ứng cho điện thoại
+        EJS_buttonsTransparency = 0.5; // Độ mờ nút ảo 50%
+        EJS_startOnLoaded = true;      // Vào là chạy luôn
+        EJS_AdUrl = '';                // Chống màn hình trắng
+
+        // Lệnh thoát: Khi bấm Exit sẽ quay lại trang chủ
+        EJS_onExit = () => {
+            window.location.href = '/';
         };
     </script>
     <script src="https://www.emulatorjs.org/loader.js"></script>
